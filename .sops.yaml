@@ -1,0 +1,13 @@
+keys:
+  - &logic age1tc27fjtcqk7yeykwtgjjagyt5k73x7nekchnpqmw38y7werd8dqq0sc0fc
+  - &penguin-tuxedo age1xdgdmlnkajfl4lcc3p45jy6nttlg2rs6g8lwhw866r2w4hkclpksm9dumr
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *logic
+          - *penguin-tuxedo
+  - path_regex: secrets/homes/work/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *penguin-tuxedo
